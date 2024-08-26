@@ -1,0 +1,140 @@
+:root {
+  --font-family: "poppins";
+  --font-size: 16px;
+  --font-weight: normal;
+  --line-height: 1.5;
+  --text-color: white;
+}
+.navbar {
+  background: rgba(54, 54, 54, 0.297); /* White background with 80% opacity */
+  backdrop-filter: blur(
+    10px
+  ); /* Optional: Apply a blur effect for a frosted glass effect */
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
+}
+
+body {
+  font-family: var(--font-family);
+  background: linear-gradient(to right, #000000, #303030);
+  color: var(--text-color);
+}
+
+.service {
+  background-color: white;
+}
+
+.text-service {
+  color: orange;
+}
+
+hr {
+  border: none; /* Menghilangkan border default */
+  height: 5px; /* Mengatur ketebalan */
+  background-color: white; /* Mengatur warna */
+}
+
+li {
+  list-style-type: none;
+}
+
+.fa-circle-check {
+  color: green;
+}
+
+.fa-circle-xmark {
+  color: red;
+}
+
+a.link {
+  text-decoration: none;
+  color: white;
+}
+
+/* .about-page {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+} */
+
+.about-page {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.about-page.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#services {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+#services.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#detail_kontak {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+#detail_kontak.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card-style {
+  width: 22rem;
+  cursor: pointer;
+  transition: z-index 0s ease, transform 0.3s ease;
+}
+
+.card-style:hover {
+  box-shadow: 0 10px 20px #ffffffad;
+  transition: 0.5s;
+  z-index: 4;
+  transform: scale(1.1);
+}
+
+.link-animation {
+  display: inline-block;
+  position: relative;
+  color: white;
+}
+
+.link-animation::after {
+  content: "";
+  position: absolute;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: orange; /* Underline color */
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.link-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.link-animation:hover {
+  color: rgb(185, 185, 185);
+}
+
+.link-animation.nav-link.active {
+  color: rgb(126, 126, 126);
+}
